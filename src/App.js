@@ -8,7 +8,7 @@ import { useState } from "react";
 import { AppContext } from "./context/context.js";
 
 function App() {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const [selectedItem, setSelectedItem] = useState(false);
   const [dataType, setDataType] = useState("month");
   const [name, setName] = useState("");
