@@ -8,16 +8,6 @@ import { useState } from "react";
 import { AppContext } from "./context/context.js";
 
 function App() {
-  const [step, setStep] = useState(1);
-  const [selectedItem, setSelectedItem] = useState(false);
-  const [dataType, setDataType] = useState("month");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [nameError, setNameError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
-
   const monthPlan = [
     {
       id: Math.random(),
@@ -109,7 +99,18 @@ function App() {
       price: 20,
       checked: false,
     },
-  ]);
+  ]);  
+  
+  const [step, setStep] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(monthPlan[0]);
+  const [dataType, setDataType] = useState("month");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
 
   function handleClickBack() {
     setStep(step - 1);
