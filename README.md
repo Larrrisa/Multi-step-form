@@ -10,7 +10,7 @@ A multi-step form: 4 steps. You have to fill in your personal information: name,
 ### Link
 https://multi-step-form-five-omega.vercel.app/
 
-![](multi-step -form.gif)
+![](multi-step-form.gif)
 
 ### Available Scripts
 
