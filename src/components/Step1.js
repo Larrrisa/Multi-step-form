@@ -19,6 +19,9 @@ function Step1({ onSubmit }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (name === "" || email === "" || phone === "") {
+      return;
+    } else
     if (nameError === "" && emailError === "" && phoneError === "") {
       onSubmit();
     }
