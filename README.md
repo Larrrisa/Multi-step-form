@@ -7,6 +7,11 @@ HTML/CSS/SCSS/React/JSON Server
 ### Description
 A multi-step form: 4 steps. You have to fill in your personal information: name, email, and phone, and choose the plan that you like the most and the extra features. After that, the information is stored and sent to a fake web server.
 
+### Link
+https://multi-step-form-five-omega.vercel.app/
+
+![](multi-step form.gif)
+
 ### Available Scripts
 
 In the project directory, you can run:
