@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "plan": "month",
+      "name": "we",
+      "email": "ws@mail.ru",
+      "phone": "1234567890",
+      "selectedPlan": {
+        "id": 0.8255840912794257,
+        "img": "./icon-advanced.svg",
+        "title": "Advanced",
+        "price": 12,
+        "checked": false
+      },
+      "monthAddOns": [
+        {
+          "id": 0.14452519484912285,
+          "title": "Larger storage",
+          "subtitle": "Extra 1TB of cloud save",
+          "price": 2,
+          "checked": true
+        },
+        {
+          "id": 0.26425792854849006,
+          "title": "Customizable profile",
+          "subtitle": "Custom theme on your profile",
+          "price": 2,
+          "checked": true
+        }
+      ],
+      "yearAddOns": [],
+      "totalPrice": 16,
+      "id": 3
+    },
+    {
+      "plan": "month",
+      "name": "Иван",
+      "email": "ivan@mail.ru",
+      "phone": "8900000000",
+      "selectedPlan": {
+        "id": 0.47770741092783076,
+        "img": "./icon-advanced.svg",
+        "title": "Advanced",
+        "price": 12,
+        "checked": false
+      },
+      "monthAddOns": [
+        {
+          "id": 0.8947755489930713,
+          "title": "Larger storage",
+          "subtitle": "Extra 1TB of cloud save",
+          "price": 2,
+          "checked": true
+        }
+      ],
+      "yearAddOns": [],
+      "totalPrice": 14,
+      "id": 5
+    },
+    {
+      "plan": "year",
+      "name": "иван",
+      "email": "iban@mail.com",
+      "phone": "1234567890",
+      "selectedPlan": {
+        "id": 0.5842683506283903,
+        "title": "Advanced",
+        "img": "./icon-advanced.svg",
+        "price": 120,
+        "bonus": "2 months free"
+      },
+      "monthAddOns": [],
+      "yearAddOns": [
+        {
+          "id": 0.636863153106265,
+          "title": "Larger storage",
+          "subtitle": "Extra 1TB of cloud save",
+          "price": 20,
+          "checked": true
+        }
+      ],
+      "totalPrice": 140,
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+$primary-blue: hsl(213, 96%, 18%);
+$light-blue: hsl(206, 94%, 87%);
+$pastel-blue: hsl(228, 100%, 84%);
+$bright-blue: hsl(243, 100%, 62%);
+$strawberry-red: hsl(354, 84%, 57%);
+
+$cool-gray: hsl(231, 11%, 63%);
+$light-gray: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.form {
+  width: min(90%, 900px);
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5rem auto;
+  border-radius: 20px;
+  border: solid 0.2px $magnolia;
+  box-shadow: 5px 12px 12px $cool-gray;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.aside {
+  background: no-repeat url("../public/bg-sidebar-desktop.svg");
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  grid-column: 1/2;
+
+  &__step {
+    padding-left: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    line-height: 1rem;
+
+    &__number {
+      border: solid $white 1px;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      color: $white;
+      margin-right: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+
+      &-active {
+        border: solid $white 1px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        color: $white;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        background-color: $light-blue;
+        color: black;
+        border: none;
+      }
+    }
+
+    &__title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: $light-gray;
+    }
+  }
+}
+
+span {
+  color: $white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info {
+  padding: 3rem 3rem 0 3rem;
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  color: $primary-blue;
+  padding-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: $cool-gray;
+  padding-bottom: 2rem;
+}
+
+.info__field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    color: $primary-blue;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.container-with-error {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $strawberry-red;
+  padding-bottom: 0;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+input {
+  border-radius: 5px;
+  border: solid 1px;
+  color: black;
+  height: 3rem;
+  cursor: pointer;
+  padding-left: 1rem;
+
+  &:focus {
+    outline: solid 1px $primary-blue;
+  }
+
+  &[type="checkbox"]:focus {
+    outline: none;
+  }
+}
+
+::placeholder {
+  font-weight: 700;
+  color: $light-gray;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  padding-top: 3rem;
+  margin-top: auto;
+  margin-bottom: 3rem;
+
+  &_first-step {
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+  }
+
+  &-forward {
+    background-color: $primary-blue;
+    color: $white;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bright-blue;
+    }
+  }
+
+  &-back {
+    border: none;
+    background-color: $white;
+    color: $cool-gray;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-blue;
+      font-weight: 700;
+    }
+  }
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border: solid 1px $cool-gray;
+  border-radius: 10px;
+  margin-right: 1rem;
+  width: 9rem;
+  height: auto;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    border: solid 1px $primary-blue;
+  }
+
+  &:active {
+    border: solid 2px $primary-blue;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__title {
+    color: $primary-blue;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__price {
+    color: $cool-gray;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__bonus {
+    color: $primary-blue;
+    font-size: 0.8rem;
+  }
+
+  &_description {
+    font-size: 1rem;
+    color: $cool-gray;
+  }
+
+  &-addons {
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+      border: solid 1px $cool-gray;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__text-block {
+        flex: 1 1 auto;
+        padding-left: 2rem;
+        align-items: center;
+      }
+
+      &__title {
+        color: $primary-blue;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+      }
+
+      &__description {
+        font-size: 1rem;
+        color: $cool-gray;
+      }
+
+      &__price {
+        color: $bright-blue;
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.final-card {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: $alabaster;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.switch-plan {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  color: $primary-blue;
+  font-weight: 500;
+
+  &__box {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  &__box input {
+    display: none;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-blue;
+    border-radius: 2rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      left: 4px;
+      bottom: 4px;
+      background-color: $white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+  }
+
+  &__month {
+    padding-right: 1rem;
+    color: $light-gray;
+  }
+
+  &__year {
+    padding-left: 1rem;
+    color: $light-gray;
+  }
+}
+
+input:checked + .switch-plan__slider {
+  background-color: $primary-blue;
+}
+
+input:checked + .switch-plan__slider:before {
+  transform: translateX(1.5rem);
+}
+
+.active {
+  color: $primary-blue;
+}
+
+.final-plan {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: $primary-blue;
+}
+
+.change-plan {
+  color: $cool-gray;
+  font-size: 0.8rem;
+  text-decoration-line: underline;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    background-color: $light-gray;
+    height: 1px;
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  &:hover {
+    color: $bright-blue;
+    font-weight: 700;
+  }
+}
+
+.addons-final {
+  display: flex;
+  justify-content: space-between;
+  color: $cool-gray;
+  line-height: 2rem;
+
+  &__price {
+    color: $primary-blue;
+  }
+}
+
+.total-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  color: $cool-gray;
+
+  &__price {
+    color: $bright-blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.btn-forward_confirm {
+  background-color: $bright-blue;
+  color: $white;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $pastel-blue;
+  }
+}
+
+.final-step {
+  padding: 3rem;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $primary-blue;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 2;
+    color: $cool-gray;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 25rem) {
+  body {
+    background-color: $alabaster;
+  }
+
+  .form {
+    width: 100vw;
+    height: 100vh;
+    background-color: $alabaster;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .aside {
+    background: no-repeat url("../public/bg-sidebar-mobile.svg");
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/4;
+    border-radius: 0;
+    justify-content: center;
+    height: 20vh;
+
+    &__step {
+      padding-top: 1rem;
+      display: flex;
+      padding-bottom: 1rem;
+
+      &__number {
+        border: solid $white 1px;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        color: $white;
+      }
+
+      &__title {
+        display: none;
+      }
+    }
+  }
+
+  .info {
+    padding: 1.5rem;
+    margin: -2rem 1rem 5rem 1rem;
+    grid-column: 1/4;
+    z-index: 100;
+    border-radius: 10px;
+    background-color: $white;
+    position: fixed;
+    top: 20%;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1rem;
+
+      &__label {
+        font-size: 0.8rem;
+        color: $primary-blue;
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+  }
+
+  input {
+    padding-left: 1rem;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 1rem;
+
+    &-forward {
+      position: fixed;
+      bottom: 1rem;
+      right: 2.4rem;
+
+      &_confirm {
+        position: fixed;
+        bottom: 1rem;
+        right: 2.4rem;
+      }
+    }
+
+    &-back {
+      position: fixed;
+      bottom: 2rem;
+      left: 2.4rem;
+      background-color: $alabaster;
+    }
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-bottom: 1rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    &__image__block {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    &__text__info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__price {
+      color: $cool-gray;
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__title {
+      color: $primary-blue;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__bonus {
+      color: $primary-blue;
+      font-size: 0.8rem;
+    }
+
+    &_description {
+      font-size: 1rem;
+      color: $cool-gray;
+    }
+  }
+
+  .switch-plan {
+    padding-top: 1rem;
+  }
+
+  .final-card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: $alabaster;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .card-addons__item__text-block {
+    padding-left: 1rem;
+  }
+
+  .card-addons__item__title {
+    font-size: 1rem;
+  }
+
+  .card-addons__item__description {
+    font-size: 0.9rem;
+  }
+
+  .final-step {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  body {
+    background-color: $alabaster;
+  }
+
+  .form {
+    width: 100vw;
+    height: 100vh;
+    background-color: $alabaster;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .aside {
+    background: cover url("../public/bg-sidebar-mobile.svg");
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/-1;
+    border-radius: 0;
+    justify-content: center;
+    height: 20vh;
+
+    &__step__title {
+      display: none;
+    }
+  }
+
+  .info {
+    padding: 1.5rem;
+    margin: -2rem auto 5rem auto;
+    grid-column: 1/4;
+    z-index: 100;
+    border-radius: 10px;
+    background-color: $white;
+    position: fixed;
+    top: 20%;
+    width: 100vw;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+  }
+
+  .info__field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+
+    &__label {
+      font-size: 0.8rem;
+      color: $primary-blue;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  input {
+    padding-left: 1rem;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 1rem;
+
+    &-forward {
+      position: fixed;
+      bottom: 1rem;
+      right: 2.4rem;
+
+      &_confirm {
+        position: fixed;
+        bottom: 1rem;
+        right: 2.4rem;
+      }
+    }
+
+    &-back {
+      position: fixed;
+      bottom: 2rem;
+      left: 2.4rem;
+      background-color: $alabaster;
+    }
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-bottom: 1rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    &__image__block {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    &__text__info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__price {
+      color: $cool-gray;
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__title {
+      color: $primary-blue;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__bonus {
+      color: $primary-blue;
+      font-size: 0.8rem;
+    }
+
+    &_description {
+      font-size: 1rem;
+      color: $cool-gray;
+    }
+  }
+
+  .card-addons__item__text-block {
+    padding-left: 1rem;
+  }
+
+  .card-addons__item__title {
+    font-size: 1rem;
+  }
+
+  .card-addons__item__description {
+    font-size: 0.9rem;
+  }
+  .switch-plan {
+    padding-top: 1rem;
+  }
+
+  .final-card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: $alabaster;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-step {
+    padding: 2rem;
+  }
+}
