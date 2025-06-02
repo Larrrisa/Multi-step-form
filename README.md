@@ -1,28 +1,31 @@
-# Multi step form
+# Multi step form — многошаговая форма с сохранением и отправкой данных
 
-## Built with
-
-#### `HTML/CSS/SCSS/React/JSON Server`
-
-### Description
-A multi-step form: 4 steps. You have to fill in your personal information: name, email, and phone, and choose the plan that you like the most and the extra features. After that, the information is stored and sent to a fake web server.
-
-### Link
-https://multi-step-form-five-omega.vercel.app/
-
+[💻 Демо](https://multi-step-form-five-omega.vercel.app)  
 ![](form-capture.gif)
 
-### Available Scripts
+## 🛠️ Стек
 
-In the project directory, you can run:
+- **React** — компоненты, управление состоянием, маршрутизация шагов
+- **SCSS** — модульная стилизация, адаптивность
+- **JSON Server** — фейковый backend для отправки данных
 
-### `npm start`
+## 📄 Описание проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Форма регистрации/покупки в 4 шага с сохранением данных и UX-навигацией:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Personal Info** — ввод имени, email, телефона
+2. **Select Plan** — выбор тарифа
+3. **Add-ons** — доп. опции
+4. **Summary & Confirmation** — финальный просмотр и подтверждение
+
+Форма валидирует ввод, блокирует переходы при ошибках и отправляет итоговые данные на фейковый сервер (JSON Server), имитируя backend.
+
+## 🚀 Как запустить
+
+```bash
+npm install
+npm start      # запускает dev-сервер на http://localhost:3000
+npm run build  # сборка проекта для продакшена
 
 ### `npm run build`
 
