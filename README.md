@@ -1,6 +1,6 @@
 # Multi step form — многошаговая форма с сохранением и отправкой данных
 
-💻 Демо - https://multi-step-form-five-omega.vercel.app
+💻 Демо - [(https://larrrisa.github.io/Multi-step-form/)](https://larrrisa.github.io/Multi-step-form/)
 
 ![](form-capture.gif)
 
